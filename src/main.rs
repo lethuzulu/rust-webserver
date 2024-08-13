@@ -5,6 +5,13 @@ use std::{
     net::{TcpListener, TcpStream},
 };
 
+use std::{
+    alloc::handle_alloc_error,
+    fmt::format,
+    io::{BufRead, BufReader, BufWriter, Write},
+    net::{TcpListener, TcpStream},
+};
+
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:80").unwrap();
 
